@@ -1,4 +1,10 @@
 .App {
   text-align: center;
 }
+#header{
+  height: 200px;
+  border-radius: 10px;
+  padding-top: 40px;
+  background: linear-gradient(120deg, rgb(49, 107, 117), rgb(93, 93, 168));
+}
 

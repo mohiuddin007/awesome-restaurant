@@ -10,7 +10,7 @@ const FoodDetail = (props) => {
                   <div className="card-body">
                       <h4>{title}</h4>
                      <p>{catagories}</p>
-                     <p>{price}</p>
+                     <p>${price}</p>
                      <button className='btn btn-sm btn-primary'
                       onClick={() => props.addToCart(props.food)}>Add to cart</button>
                   </div>

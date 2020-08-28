@@ -25,12 +25,9 @@ function App() {
   const totalPrice = cart.reduce((acc, current) => acc + current.price, 0);
   return (
     <div className="container-fluid px-2 App">
-      <h1 className="text-center py-4 logo">Awesome Restaurant Food</h1>
+      <div className="text-center" id="header"><h1 className="py-4 logo">Awesome Restaurant Food</h1></div>
       <div className="row">
-        <div className="col-md-9 row border-right">
-           {foods.map((food) => <FoodDetail food={food} key={food._id}/> )}
-        </div>
-        <div className="col-md-3">
+      <div className="col-md-3">
              <h2 className="text-center">Cart{cart.length}</h2>
            <ul className="list-group">
               {cart.map(item => <Cart item={item}/>)}
@@ -38,6 +35,9 @@ function App() {
            <button type="button" className="btn btn-primary btn-block">
              Checkout <span className="badge badge-light">$ {totalPrice}</span>
            </button>
+        </div>
+        <div className="col-md-9 row border-right">
+           {foods.map((food) => <FoodDetail food={food} addToCart={addToCart} key={food._id}/> )}
         </div>
       </div>
     </div>
